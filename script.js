@@ -17,5 +17,8 @@ document.querySelector('form.form').addEventListener('submit',
 
         num += 2;
         numSub -= 1;
+      } if (inputTall.value == "") {
+        alert("Please enter a value");
       }
+      console.log(" Merry Christmas!!")
   });
