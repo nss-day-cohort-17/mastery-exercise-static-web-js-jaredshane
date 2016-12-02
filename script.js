@@ -1,18 +1,24 @@
-/* Create a `tree` function that should build a
-pine tree out of a character in the Chrome dev
-tools console. */
 
-/* It accepts a single object as an argument.
-The object should have two key/value pairs. */
+var inputTall = document.getElementById("inputTall");
+var inputCharacter = document.getElementById("inputCharacter");
 
-/* A key that specifies the height of the pine tree. */
 
-/* The value for the height of the tree should be
-from user input in a `<input type="text">` field in
-the DOM.*/
 
-/*A key that specifies which character to use
-to build the pine tree. */
+document.querySelector('form.form').addEventListener('submit',
+    function treeFunc(event) {
+      //prevent the normal submission of the form
 
-/* The character to use should be from user
-input in a `<input type="text">` field in the DOM. */
+      event.preventDefault();
+
+      var num = 1;
+      var numSub = inputTall.value;
+      while(num < parseInt(inputTall.value) * 2){
+        console.log(" ".repeat(numSub - 1) + inputCharacter.value.repeat(num) + " ");
+
+        num += 2;
+        numSub -= 1;
+      } if (inputTall.value == "") {
+        alert("Please enter a value");
+      }
+      console.log(" Merry Christmas!!")
+  });
